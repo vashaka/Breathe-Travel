@@ -20,6 +20,8 @@ const Plan = ({ PlanTitle, amountOfLandmarks }) => {
             // backgroundColor: PlanTitle === ActivePlan ? "red" : "",
             // border:
             //   PlanTitle === ActivePlan ? "3px solid rgb(245, 23, 103)" : "",
+            // backgroundColor: PlanTitle === "VIP" ? "red" : "",
+            border: PlanTitle === "VIP" ? "3px solid rgb(245, 23, 103)" : "",
           }}
         >
           <p className="">{PlanTitle}</p>
