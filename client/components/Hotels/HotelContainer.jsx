@@ -2,15 +2,15 @@ import React from "react";
 
 const HotelContainer = ({ hotel }) => {
   return (
-    <div className="relative hover:cursor-pointer">
+    <div className="relative hover:cursor-pointer w-full md:w-[300px]">
       <img
         src={hotel?.imageUrl}
         className="rounded-xl h-[250px] md:w-[300px] w-full"
         alt="Hotel-image"
       />
       <div className="flex items-center">
-        <h4 className="mt-2">{hotel?.title}</h4>
-        <h4 className="flex absolute right-0">
+        <h4 className="mt-1">{hotel?.title}</h4>
+        <h4 className="flex absolute right-0 mt-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -36,7 +36,7 @@ const HotelContainer = ({ hotel }) => {
         <h4>
           {hotel.price}$ <span className="text-gray-600">night</span>
         </h4>
-        <div className="flex absolute right-0">
+        <div className="flex absolute right-0 top-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

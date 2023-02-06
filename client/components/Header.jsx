@@ -10,16 +10,19 @@ const Header = () => {
     <div className="w-full py-8 flex justify-between items-center">
       <div className="flex justify-center">
         <Link href={"/"} className="flex items-center gap-1">
-          <p className="font-bold text-xl">Breathe.</p>
+          <p className="font-semibold text-xl">Breathe.</p>
         </Link>
       </div>
-      <div className="rounded-full flex border shadow-md relative shadow-gray-300 px-8 py-3 gap-4 border-gray-300 hover:shadow-lg duration-500 justify-center">
+      <div className="rounded-full flex border shadow-md relative shadow-gray-300 px-8 py-2 gap-4 border-gray-300 hover:shadow-lg duration-500 justify-center">
         {url === "/" || url.includes("hotels") ? (
-          <Link href="/" className="text-[15px] text-gray-400 cursor-pointer">
+          <Link
+            href="/"
+            className="text-[15px] text-gray-400 cursor-pointer font-semibold"
+          >
             Hotels
           </Link>
         ) : (
-          <Link href="/" className="text-[15px] cursor-pointer">
+          <Link href="/" className="text-[15px] cursor-pointer font-semibold">
             Hotels
           </Link>
         )}
@@ -28,15 +31,14 @@ const Header = () => {
         {url === "/landmarks" ? (
           <Link
             href="/landmarks"
-            className="text-[15px] text-gray-400 cursor-pointer"
+            className="text-[15px] text-gray-400 cursor-pointer font-semibold"
           >
             Landmarks
           </Link>
         ) : (
           <Link
             href="/landmarks"
-            className="text-[15px] cursor-pointer"
-            onClick={() => router.push("/landmarks")}
+            className="text-[15px] cursor-pointer font-semibold"
           >
             Landmarks
           </Link>
@@ -46,22 +48,21 @@ const Header = () => {
         {url === "/cars" ? (
           <Link
             href="/cars"
-            className="text-[15px] cursor-pointer text-gray-400"
+            className="text-[15px] cursor-pointer text-gray-400 font-semibold"
           >
             cars
-            <span className="text-white">iw</span>
+            {/* <span className="text-white">iw</span> */}
           </Link>
         ) : (
           <Link
             href="/cars"
-            className="text-[15px] cursor-pointer"
-            onClick={() => router.push("/cars")}
+            className="text-[15px] cursor-pointer font-semibold"
           >
             cars
-            <span className="text-white">iw</span>
+            {/* <span className="text-white">iw</span> */}
           </Link>
         )}
-        <button className="bg-red-500 text-white p-2 top-[15%] absolute right-1 rounded-full">
+        {/* <button className="bg-red-500 text-white p-2 top-[15%] absolute right-1 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -76,9 +77,9 @@ const Header = () => {
               d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
             />
           </svg>
-        </button>
+        </button> */}
       </div>
-      <div className="font-semibold flex items-center gap-2 border border-gray-300 rounded-full py-2 px-4 shadow-md">
+      <div className="font-semisemibold flex items-center gap-2 border border-gray-300 rounded-full py-2 px-4 shadow-md">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
