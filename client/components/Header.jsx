@@ -14,7 +14,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="rounded-full flex border shadow-md shadow-gray-300 px-8 py-2 gap-4 border-gray-300 hover:shadow-lg duration-500 justify-center">
-        {url === "/" ? (
+        {url === "/" || url.includes("hotels") ? (
           <Link href="/" className="text-[15px] text-gray-400 cursor-pointer">
             Hotels
           </Link>
