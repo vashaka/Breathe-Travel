@@ -2,7 +2,7 @@ import React from "react";
 
 const HotelContainer = ({ hotel }) => {
   return (
-    <div className="relative hover:cursor-pointer w-full md:w-[300px]">
+    <div className="mt-6 relative hover:cursor-pointer w-full md:w-[300px]">
       <img
         src={hotel?.imageUrl}
         className="rounded-xl h-[250px] md:w-[300px] w-full"

@@ -52,6 +52,27 @@ body {
   grid-row: span 2;
 }
 
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.slide {
+  opacity: 0.8;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 2s;
+  transform: scale(1.08);
+}
+
 /* Anything udner 1024px */
 @media screen and (max-width: 1024px) {
   .image-grid {

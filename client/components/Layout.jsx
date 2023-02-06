@@ -3,9 +3,9 @@ import Header from "./Header";
 
 const Layout = ({ children }) => {
   return (
-    <div className="px-16">
+    <div className="">
       <Header />
-      <main>{children}</main>
+      <main className="px-8 md:px-28">{children}</main>
     </div>
   );
 };

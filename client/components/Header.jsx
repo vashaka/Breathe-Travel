@@ -7,22 +7,39 @@ const Header = () => {
   const url = router.pathname;
 
   return (
-    <div className="w-full py-8 flex justify-between items-center">
+    <div className="border px-8 md:px-28 w-full py-6 flex justify-between items-center">
       <div className="flex justify-center">
         <Link href={"/"} className="flex items-center gap-1">
           <p className="font-semibold text-xl">Breathe.</p>
         </Link>
       </div>
       <div className="rounded-full flex border shadow-md relative shadow-gray-300 px-8 py-2 gap-4 border-gray-300 hover:shadow-lg duration-500 justify-center">
-        {url === "/" || url.includes("hotels") ? (
+        {url === "/" ? (
           <Link
             href="/"
+            className="text-[15px] text-gray-400 cursor-pointer font-semibold"
+          >
+            Home
+          </Link>
+        ) : (
+          <Link href="/" className="text-[15px] cursor-pointer font-semibold">
+            Home
+          </Link>
+        )}
+        <div className="border-l border-gray-300"></div>
+        {/* Hotels */}
+        {url === "/hotels" || url.includes("hotels") ? (
+          <Link
+            href="/hotels"
             className="text-[15px] text-gray-400 cursor-pointer font-semibold"
           >
             Hotels
           </Link>
         ) : (
-          <Link href="/" className="text-[15px] cursor-pointer font-semibold">
+          <Link
+            href="/hotels"
+            className="text-[15px] cursor-pointer font-semibold"
+          >
             Hotels
           </Link>
         )}
