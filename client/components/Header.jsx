@@ -7,7 +7,7 @@ const Header = () => {
   const url = router.pathname;
 
   return (
-    <div className="border px-8 md:px-28 w-full py-6 flex justify-between items-center">
+    <div className="px-8 md:px-28 w-full py-6 flex justify-between items-center">
       <div className="flex justify-center">
         <Link href={"/"} className="flex items-center gap-1">
           <p className="font-semibold text-xl">Breathe.</p>
