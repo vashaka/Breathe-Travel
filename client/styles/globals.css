@@ -1,8 +1,14 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-[Poppins];
+  }
+}
 
 @layer components {
   h1 {
@@ -76,6 +82,31 @@ body {
   transform: scale(1.08);
 }
 
+.btn {
+  border: 1px solid #f51767;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: max-content;
+  border-radius: 5px;
+  height: 35px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0px 20px;
+  background-color: hsl(338, 92%, 53%);
+  color: white;
+}
+
+.btn:hover {
+  background-color: hsl(338, 92%, 43%);
+}
 /* Anything udner 1024px */
 @media screen and (max-width: 1024px) {
   .image-grid {

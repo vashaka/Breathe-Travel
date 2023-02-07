@@ -2,7 +2,11 @@ import React from "react";
 
 const HotelContainer = ({ hotel }) => {
   return (
-    <div className="mt-6 relative hover:cursor-pointer w-full md:w-[300px]">
+    <div
+      className="mt-6 relative hover:cursor-pointer w-full md:w-[300px] 
+
+    "
+    >
       <img
         src={hotel?.imageUrl}
         className="rounded-xl h-[250px] md:w-[300px] w-full"
@@ -34,7 +38,7 @@ const HotelContainer = ({ hotel }) => {
       <h4 className="text-gray-400 font-normal">{hotel?.reviews} reviews</h4>
       <div className="flex relative">
         <h4>
-          {hotel.price}$ <span className="text-gray-600">night</span>
+          {hotel?.price}$ <span className="text-gray-600">night</span>
         </h4>
         <div className="flex absolute right-0 top-1">
           <svg
@@ -66,6 +70,26 @@ const HotelContainer = ({ hotel }) => {
             />
           </svg>
         </div>
+      </div>
+      <div className="flex justify-center mt-4">
+        <button className="btn flex flex-1">
+          Details
+          {/* See more */}
+          {/* <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+            />
+          </svg> */}
+        </button>
       </div>
     </div>
   );

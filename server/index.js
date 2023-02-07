@@ -4,11 +4,13 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const hotelRoutes = require("./routes/hotels");
+const landmarkRoutes = require("./routes/landmarks");
 
 app.use(cors());
 app.use(express.json());
 
 app.use("/hotels", hotelRoutes);
+app.use("/landmarks", landmarkRoutes);
 
 mongoose.set("strictQuery", false);
 mongoose

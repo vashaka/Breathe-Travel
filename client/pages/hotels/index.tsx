@@ -12,13 +12,14 @@ const HotelsPage = () => {
       .then((response) => response.json())
       .then((data) => {
         setHotelsInfo(data);
-      });
+      })
+      .catch((err) => console.log(err));
   });
 
   return (
     <div>
       <Head>
-        <title>Breathe.</title>
+        <title>hotels</title>
       </Head>
       <div className=" grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[20px] mx-auto">
         {hotelsInfo.length > 0 &&

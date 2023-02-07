@@ -10,7 +10,7 @@ const Header = () => {
     <div className="px-8 md:px-28 w-full py-6 flex justify-between items-center">
       <div className="flex justify-center">
         <Link href={"/"} className="flex items-center gap-1">
-          <p className="font-bold text-2xl">Breathe.</p>
+          <p className="font-bold text-2xl text-red-700">Breathe.</p>
         </Link>
       </div>
       <div className="rounded-full flex border shadow-md relative shadow-gray-300 px-8 py-2 gap-4 border-gray-300 hover:shadow-lg duration-500 justify-center">
@@ -45,7 +45,7 @@ const Header = () => {
         )}
         <div className="border-l border-gray-300"></div>
         {/* Landmarks */}
-        {url === "/landmarks" ? (
+        {url === "/landmarks" || url.includes("landmarks") ? (
           <Link
             href="/landmarks"
             className="text-[15px] text-gray-400 cursor-pointer font-semibold"

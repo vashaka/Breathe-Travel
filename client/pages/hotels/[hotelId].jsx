@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 const SingleHotel = () => {
   const [hotel, setHotel] = useState([]);
+  const [error, setError] = useState(false);
 
   const router = useRouter();
   const id = router.query.hotelId;
@@ -14,7 +15,7 @@ const SingleHotel = () => {
         setHotel(data);
         console.log(data);
       })
-      .catch((err) => console.log(err));
+      .catch(setError(true));
   });
 
   return (
