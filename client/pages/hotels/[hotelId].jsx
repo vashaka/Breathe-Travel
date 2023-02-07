@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const SingleHotel = () => {
   const [hotel, setHotel] = useState([]);
@@ -20,6 +21,10 @@ const SingleHotel = () => {
 
   return (
     <div>
+      <Head>
+        <title>{hotel?.title}</title>
+      </Head>
+
       <h1>{hotel.title}</h1>
       <img src={hotel.imageUrl} />
       <div class="image-grid">

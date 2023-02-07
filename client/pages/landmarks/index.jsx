@@ -19,6 +19,9 @@ const LandmarksPage = () => {
       <Head>
         <title>landmarks</title>
       </Head>
+      <h1 className="text-center text-red-700">
+        {landmarksInfo.length} landmarks available
+      </h1>
       <div className=" grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[20px] mx-auto">
         {landmarksInfo.length > 0 &&
           landmarksInfo.map((landmark) => {
