@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-[Poppins] m-0 p-0 flex justify-center sm:w-[150%] sms:w-full;
+    @apply font-[Poppins] m-0 p-0 flex justify-center w-full;
   }
 }
 
