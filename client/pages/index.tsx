@@ -5,7 +5,7 @@ import PlanContainer from "./../components/Plans/PlanContainer";
 
 const HomePage = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2">
+    <div className="grid md:grid-cols-2">
       {/* <h1 className="text-center">
         We'll travel you Everywhere in this stunning country
       </h1> */}

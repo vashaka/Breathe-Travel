@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className="px-8 md:px-28 py-6 flex justify-between items-center w-full">
       <div className="flex justify-center">
-        <Link href={"/"} className="flex items-center gap-1">
+        <Link href={"/"} className="smd:flex hidden items-center gap-1">
           <p className="font-bold text-2xl text-red-700">Breathe.</p>
         </Link>
       </div>

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import LandmarkContainer from "./../../components/Landmarks/LandmarkContainer";
+import LandmarkContainer from "../../components/Landmarks/LandmarkContainer";
 
 const LandmarksPage = () => {
   const [landmarksInfo, setLandmarksInfo] = useState([]);

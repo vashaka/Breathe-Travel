@@ -56,6 +56,7 @@ const singleLandmark = () => {
           // style={{ borderRadius: "0px 0px 20px 0px" }}
         />
       </div>
+      <p>{landmark.description}</p>
     </div>
   );
 };

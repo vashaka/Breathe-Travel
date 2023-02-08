@@ -8,14 +8,14 @@ const GeoMap = () => {
   // const ActivePlan = useSelector((state) => state.ActivePlan);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center w-full">
       {/* Ignore This */}
       <h1 className="absolute bottom-24 opacity-0" name="Plans">
         textForSmoothScroll
       </h1>
       {/* ----------- */}
       {/* <h1 className="absolute text-[#f51767]">{ActivePlan}</h1> */}
-      <Image src={GEO_MAP} alt="geo-map" width={800} />
+      <Image src={GEO_MAP} alt="geo-map" width={800} height={800} />
     </div>
   );
 };
