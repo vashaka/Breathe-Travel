@@ -25,7 +25,7 @@ const singleLandmark = () => {
       </Head>
       <h2 className="font-semibold">{landmark.title}</h2>
       {/* <img src={landmark.imageUrl} /> */}
-      <h1 className="text-red-500 md:text-blue-500">Hello</h1>
+
       <div class="image-grid">
         <img
           class="image-grid-col-2 image-grid-row-2 xs:rounded-3xl md:rounded-sm md:rounded-l-3xl w-[100px]"
