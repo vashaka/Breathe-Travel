@@ -28,7 +28,7 @@ const singleLandmark = () => {
 
       <div class="image-grid">
         <img
-          class="image-grid-col-2 image-grid-row-2 xs:rounded-3xl md:rounded-sm md:rounded-l-3xl w-[100px]"
+          className="image-grid-col-2 image-grid-row-2 xs:rounded-3xl md:rounded-sm md:rounded-l-3xl w-[100px]"
           // style={{ borderRadius: "20px 0px 0px 20px" }}
           src={landmark?.imageUrl}
           alt={landmark?.title}
