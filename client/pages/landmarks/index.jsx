@@ -22,7 +22,7 @@ const LandmarksPage = () => {
       <h1 className="text-center text-red-700">
         {landmarksInfo.length} landmarks available
       </h1>
-      <div className=" grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[20px] mx-auto">
+      <div className=" grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] mx-auto max-w-max">
         {landmarksInfo.length > 0 &&
           landmarksInfo.map((landmark) => {
             return (

@@ -17,14 +17,14 @@ const HotelsPage = () => {
   });
 
   return (
-    <div>
+    <div className="">
       <Head>
         <title>hotels</title>
       </Head>
       <h1 className="text-center text-red-700">
         {hotelsInfo.length} hotels available
       </h1>
-      <div className=" grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[20px] mx-auto">
+      <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] mx-auto max-w-max">
         {hotelsInfo.length > 0 &&
           hotelsInfo.map((hotel) => {
             return (
