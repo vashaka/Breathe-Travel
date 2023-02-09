@@ -65,7 +65,7 @@ const HomePage = () => {
               );
             })}
         </div>
-        <Link href="/landmarks" className="flex justify-center mt-6">
+        <Link href="/landmarks" className="flex justify-center mt-8">
           <button className="btn">Load More...</button>
         </Link>
       </div>
@@ -78,9 +78,9 @@ const HomePage = () => {
           <h1 className="text-xl text-[#f51767] mt-1">Choose Your Hotels</h1>
         </div>
 
-        {/* <p className="text-md mb-1 text-center">
-          // Tap on your favourite and check it on the map
-        </p> */}
+        <p className="text-md mb-1 text-center">
+          // Tap on your favourite hotel and check the recommended landmarks
+        </p>
         <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] mx-auto max-w-max">
           {hotelsInfo.length > 0 &&
             hotelsInfo.map((hotel: any) => {
@@ -91,7 +91,7 @@ const HomePage = () => {
               );
             })}
         </div>
-        <Link href="/hotels" className="flex justify-center mt-6">
+        <Link href="/hotels" className="flex justify-center mt-8">
           <button className="btn">load more...</button>
         </Link>
       </div>
