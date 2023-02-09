@@ -20,6 +20,7 @@ const GeoMap = () => {
         src={GEO_MAP}
         alt="geo-map"
         // className="h-[400px] w-[400px]"
+        className="mx-auto"
         width={800}
         // height={800}
       />

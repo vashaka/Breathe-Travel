@@ -43,6 +43,7 @@ const HomePage = () => {
         <GeoMap />
         <PlanContainer />
       </div>
+      <hr />
       <div className="max-w-[1440px] m-auto py-16 px-4 relative">
         <div className="flex justify-center mb-1">
           <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm">
@@ -69,6 +70,7 @@ const HomePage = () => {
           <button className="btn">Load More...</button>
         </Link>
       </div>
+      <hr />
       <div className="max-w-[1440px] m-auto py-16 px-4 relative">
         <div className="flex justify-center mb-1">
           <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm">

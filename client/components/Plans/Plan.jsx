@@ -1,17 +1,16 @@
 import React from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { AppActions } from "../../redux";
-// import { Link } from "react-scroll";
+import { useDispatch, useSelector } from "react-redux";
+import { AppActions } from "../../redux";
 
 const Plan = ({ PlanTitle, amountOfLandmarks }) => {
-  // const dispatch = useDispatch();
-  // const ActivePlan = useSelector((state) => state.ActivePlan);
+  const dispatch = useDispatch();
+  const ActivePlan = useSelector((state) => state.ActivePlan);
 
   return (
     <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
       <div>
         <div
-          // onClick={() => dispatch(AppActions.setActivePlan(PlanTitle))}
+          onClick={() => dispatch(AppActions.setActivePlan(PlanTitle))}
           className="hover:scale-105 cursor-pointer ease-in duration-300 w-full h-[auto] object-cover"
           style={{
             borderRadius: "25px",
@@ -21,7 +20,8 @@ const Plan = ({ PlanTitle, amountOfLandmarks }) => {
             // border:
             //   PlanTitle === ActivePlan ? "3px solid rgb(245, 23, 103)" : "",
             // backgroundColor: PlanTitle === "VIP" ? "red" : "",
-            border: PlanTitle === "VIP" ? "3px solid rgb(245, 23, 103)" : "",
+            border:
+              PlanTitle === ActivePlan ? "3px solid rgb(245, 23, 103)" : "",
           }}
         >
           <p className="">{PlanTitle}</p>

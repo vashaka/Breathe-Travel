@@ -19,7 +19,7 @@ const singleLandmark = () => {
       .catch(setError(true));
   }, [id]);
   return (
-    <div className="md:px-12">
+    <div className="md:mx-24">
       <Head>
         <title>{landmark?.title}</title>
       </Head>

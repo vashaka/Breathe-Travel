@@ -125,6 +125,11 @@ body {
   height: 450px;
   /* overflow: scroll; */
 }
+
+.progressMainStyle {
+  height: 5px;
+  background: #00cc83;
+}
 /* Anything udner 1024px */
 @media screen and (max-width: 1024px) {
   .image-grid {
