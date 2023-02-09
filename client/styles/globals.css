@@ -12,7 +12,8 @@
 
 @layer components {
   h1 {
-    @apply text-3xl font-bold;
+    /* @apply text-3xl font-bold; */
+    @apply text-lg md:text-xl font-bold;
   }
   h2 {
     @apply text-2xl font-bold;
@@ -117,6 +118,12 @@ body {
 
 .btn:hover {
   background-color: hsl(338, 92%, 43%);
+}
+
+.LandMarksContainer {
+  position: relative;
+  height: 450px;
+  /* overflow: scroll; */
 }
 /* Anything udner 1024px */
 @media screen and (max-width: 1024px) {

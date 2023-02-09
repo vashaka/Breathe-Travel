@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
 const SingleHotel = () => {
-  const [hotel, setHotel] = useState([]);
+  const [hotel, setHotel] = useState<any>([]);
   const [error, setError] = useState(false);
 
   const router = useRouter();
   const id = router.query.hotelId;
 
-  useEffect(() => {
+  useMemo(() => {
     fetch("http://localhost:3001/hotels/" + id)
       .then((response) => response.json())
       .then((data) => {
@@ -17,7 +17,7 @@ const SingleHotel = () => {
         console.log(data);
       })
       .catch(setError(true));
-  });
+  }, [id]);
 
   return (
     <div>
@@ -26,8 +26,8 @@ const SingleHotel = () => {
       </Head>
 
       <h1>{hotel.title}</h1>
-      <img src={hotel.imageUrl} />
-      <div class="image-grid">
+      <img src={hotel.imageUrl} alt="image" />
+      <div className="image-grid">
         <img
           class="image-grid-col-2 image-grid-row-2"
           style={{ borderRadius: "20px 0px 0px 20px" }}

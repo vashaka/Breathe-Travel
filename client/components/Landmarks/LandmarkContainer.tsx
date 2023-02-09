@@ -3,13 +3,13 @@ import React from "react";
 const LandmarkContainer = ({ landmark }) => {
   return (
     <div
-      className="mt-6 relative hover:cursor-pointer w-full md:w-[300px] 
+      className="mt-6 relative hover:cursor-pointer w-auto md:w-[300px] 
 
     "
     >
       <img
         src={landmark?.imageUrl}
-        className="rounded-xl h-[250px] md:w-[300px] w-full"
+        className="rounded-2xl object-cover aspect-square"
         alt="landmark-image"
       />
       <div className="flex items-center">

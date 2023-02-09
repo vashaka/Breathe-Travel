@@ -1,11 +1,11 @@
+import { useEffect, useState, useMemo } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import LandmarkContainer from "../../components/Landmarks/LandmarkContainer";
 
 const LandmarksPage = () => {
   const [landmarksInfo, setLandmarksInfo] = useState([]);
-  useEffect(() => {
+  useMemo(() => {
     fetch("http://localhost:3001/landmarks")
       .then((response) => response.json())
       .then((data) => {

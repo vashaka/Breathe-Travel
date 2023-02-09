@@ -27,24 +27,8 @@ const Header = () => {
           </Link>
         )}
         <div className="border-l border-gray-300"></div>
-        {/* Hotels */}
-        {url === "/hotels" || url.includes("hotels") ? (
-          <Link
-            href="/hotels"
-            className="text-[15px] text-gray-400 cursor-pointer font-semibold"
-          >
-            Hotels
-          </Link>
-        ) : (
-          <Link
-            href="/hotels"
-            className="text-[15px] cursor-pointer font-semibold"
-          >
-            Hotels
-          </Link>
-        )}
-        <div className="border-l border-gray-300"></div>
         {/* Landmarks */}
+
         {url === "/landmarks" || url.includes("landmarks") ? (
           <Link
             href="/landmarks"
@@ -58,6 +42,24 @@ const Header = () => {
             className="text-[15px] cursor-pointer font-semibold"
           >
             Landmarks
+          </Link>
+        )}
+        <div className="border-l border-gray-300"></div>
+        {/* Hotels */}
+
+        {url === "/hotels" || url.includes("hotels") ? (
+          <Link
+            href="/hotels"
+            className="text-[15px] text-gray-400 cursor-pointer font-semibold"
+          >
+            Hotels
+          </Link>
+        ) : (
+          <Link
+            href="/hotels"
+            className="text-[15px] cursor-pointer font-semibold"
+          >
+            Hotels
           </Link>
         )}
         <div className="border-l border-gray-300"></div>

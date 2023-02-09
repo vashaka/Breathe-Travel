@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import HotelContainer from "../../components/Hotels/HotelContainer";
 import Head from "next/head";
 import Link from "next/link";
@@ -7,14 +7,14 @@ import { useRouter } from "next/router";
 const HotelsPage = () => {
   const router = useRouter();
   const [hotelsInfo, setHotelsInfo] = useState<any[]>([]);
-  useEffect(() => {
+  useMemo(() => {
     fetch("http://localhost:3001/hotels")
       .then((response) => response.json())
       .then((data) => {
         setHotelsInfo(data);
       })
       .catch((err) => console.log(err));
-  });
+  }, []);
 
   return (
     <div className="">

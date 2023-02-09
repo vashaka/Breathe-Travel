@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 
 const singleLandmark = () => {
-  const [landmark, setLandmark] = useState([]);
+  const [landmark, setLandmark] = useState<any>([]);
   const [error, setError] = useState(false);
 
   const router = useRouter();
   const id = router.query.landmarkId;
 
-  useEffect(() => {
+  useMemo(() => {
     fetch("http://localhost:3001/landmarks/" + id)
       .then((response) => response.json())
       .then((data) => {
         setLandmark(data);
       })
       .catch(setError(true));
-  });
+  }, [id]);
   return (
     <div className="md:px-12">
       <Head>
