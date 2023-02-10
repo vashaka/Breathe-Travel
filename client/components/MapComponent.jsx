@@ -19,19 +19,6 @@ const MapComponent = ({ x, y }) => {
   console.log(x);
   return (
     <>
-      {/* <div className="flex justify-center">
-        <h1 className="absolute -bottom-[700px] opacity-0" name="Google-Maps">
-          forSmoothScroll
-        </h1>
-      </div>
-      <div className="flex justify-center">
-        <h1 className="mb-2">
-          Selected Destination
-          <span className="text-white bg-[#f51767] px-2 py-1">
-            {selectedDestination}
-          </span>
-        </h1>
-      </div> */}
       <div className="hidden lg:flex justify-center">
         <GoogleMap
           zoom={zoomLevel}
@@ -54,7 +41,6 @@ const MapComponent = ({ x, y }) => {
           <Marker position={{ lat: x, lng: y }} />
         </GoogleMap>
       </div>
-      <h1>Hello</h1>
     </>
   );
 };

@@ -66,9 +66,11 @@ const HomePage = () => {
               );
             })}
         </div>
-        <Link href="/landmarks" className="flex justify-center mt-8">
-          <button className="btn">Load More...</button>
-        </Link>
+        {landmarksInfo.length > 0 && (
+          <Link href="/landmarks" className="flex justify-center mt-8">
+            <button className="btn">Load More...</button>
+          </Link>
+        )}
       </div>
       <hr />
       <div className="max-w-[1440px] m-auto py-16 px-4 relative">
@@ -93,9 +95,11 @@ const HomePage = () => {
               );
             })}
         </div>
-        <Link href="/hotels" className="flex justify-center mt-8">
-          <button className="btn">load more...</button>
-        </Link>
+        {hotelsInfo.length > 0 && (
+          <Link href="/landmarks" className="flex justify-center mt-8">
+            <button className="btn">Load More...</button>
+          </Link>
+        )}
       </div>
     </div>
   );
