@@ -17,7 +17,9 @@ const landmarkSchema = new Schema(
     reviews: { type: Number, required: true },
     viewed: { type: String, required: true },
     stars: { type: Number, required: true },
-    coordinates: { x: String, y: String },
+    // coordinates: { x: String, y: String },
+    x: Number,
+    y: Number,
   },
   { timestamps: true }
 );

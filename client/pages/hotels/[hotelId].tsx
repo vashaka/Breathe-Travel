@@ -9,7 +9,7 @@ const SingleHotel = () => {
   const router = useRouter();
   const id = router.query.hotelId;
 
-  useMemo(() => {
+  useEffect(() => {
     fetch("http://localhost:3001/hotels/" + id)
       .then((response) => response.json())
       .then((data) => {

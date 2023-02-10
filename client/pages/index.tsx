@@ -56,7 +56,7 @@ const HomePage = () => {
         <p className="text-md mb-1 text-center">
           // Tap on your favourite and check it on the map
         </p>
-        <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] mx-auto max-w-max">
+        <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] mx-auto max-w-max">
           {landmarksInfo.length > 0 &&
             landmarksInfo.map((landmark: any) => {
               return (
@@ -83,7 +83,7 @@ const HomePage = () => {
         <p className="text-md mb-1 text-center">
           // Tap on your favourite hotel and check the recommended landmarks
         </p>
-        <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] mx-auto max-w-max">
+        <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] mx-auto max-w-max">
           {hotelsInfo.length > 0 &&
             hotelsInfo.map((hotel: any) => {
               return (

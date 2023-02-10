@@ -130,6 +130,17 @@ body {
   height: 5px;
   background: #00cc83;
 }
+
+.map-container {
+  width: 80%;
+  height: 70vh;
+  border-radius: 20px;
+}
+
+.map-container-for-small-screens {
+  width: 100%;
+  height: 40vh;
+}
 /* Anything udner 1024px */
 @media screen and (max-width: 1024px) {
   .image-grid {
