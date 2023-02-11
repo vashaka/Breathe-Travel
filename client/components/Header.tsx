@@ -148,7 +148,7 @@ const Header = () => {
         </button> */}
         </div>
         <Link
-          href="/cart"
+          href="/login"
           className="font-semisemibold flex items-center gap-2 border border-gray-300 rounded-full py-2 px-4 shadow-md"
         >
           <svg

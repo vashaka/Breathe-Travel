@@ -26,7 +26,16 @@ const Plan = ({ PlanTitle, amountOfLandmarks }) => {
         >
           <p className="">{PlanTitle}</p>
           <p className="opacity-30">What You'll Get</p>
-          <p>up to {amountOfLandmarks} Landmarks</p>
+          {ActivePlan === PlanTitle && (
+            <>
+              <li>cars</li>
+              <li>up to {amountOfLandmarks} Landmarks</li>
+              <li>{PlanTitle} cars</li>
+              <li>car</li>
+              <li>car</li>
+              <li>car</li>
+            </>
+          )}
         </div>
       </div>
     </div>
