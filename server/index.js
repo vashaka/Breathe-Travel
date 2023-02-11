@@ -2,13 +2,20 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
 const hotelRoutes = require("./routes/hotels");
 const landmarkRoutes = require("./routes/landmarks");
 const authRoutes = require("./routes/auth");
 
-app.use(cors());
 app.use(express.json());
+app.use(cookieParser());
+app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:3000",
+  })
+);
 
 app.use("/hotels", hotelRoutes);
 app.use("/landmarks", landmarkRoutes);

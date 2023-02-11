@@ -19,20 +19,17 @@ const Register = () => {
     //       .then((user) => console.log(user))
     //       .catch((err) => console.log(err));
     //   };
-    fetch("http://localhost:3001/auth/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+    try {
+      await axios.post("http://localhost:3001/auth/register", {
         name,
         email,
         password,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error(error));
+      });
+      alert("RESGISTRATION SUCCESSFULL, NOW LOG IN");
+      // setRedirect(true);
+    } catch (err) {
+      alert("Registration failed, try Again");
+    }
   };
 
   return (

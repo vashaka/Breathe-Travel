@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { UserContext } from "../UserContext";
 
 const Header = () => {
+  const { user }: any = useContext(UserContext);
   const router = useRouter();
   const url = router.pathname;
 
@@ -148,7 +150,7 @@ const Header = () => {
         </button> */}
         </div>
         <Link
-          href="/login"
+          href={user ? "/profile" : "/login"}
           className="font-semisemibold flex items-center gap-2 border border-gray-300 rounded-full py-2 px-4 shadow-md"
         >
           <svg
@@ -180,6 +182,7 @@ const Header = () => {
               />
             </svg>
           </div>
+          {!!user && <div>{user.name}</div>}
         </Link>
         <div
           className="progressMainStyle absolute bottom-0 left-0"

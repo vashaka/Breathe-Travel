@@ -14,7 +14,7 @@ const MapComponent = ({ x, y }) => {
 
   // we can use marker if we want it on map
 
-  const zoomLevel = 10;
+  const zoomLevel = 9;
 
   console.log(x);
   return (
@@ -24,7 +24,6 @@ const MapComponent = ({ x, y }) => {
           zoom={zoomLevel}
           center={{ lat: x, lng: y }}
           mapContainerClassName="map-container"
-          className="w-[180%] h-[80vh]"
         >
           <Marker position={{ lat: x, lng: y }} />
         </GoogleMap>
@@ -36,7 +35,6 @@ const MapComponent = ({ x, y }) => {
           zoom={zoomLevel}
           center={{ lat: x, lng: y }}
           mapContainerClassName="map-container-for-small-screens"
-          className="w-[180%] h-[80vh]"
         >
           <Marker position={{ lat: x, lng: y }} />
         </GoogleMap>

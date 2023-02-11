@@ -7,11 +7,8 @@ import PlanContainer from "./../components/Plans/PlanContainer";
 import HotelContainer from "../components/Hotels/HotelContainer";
 import Link from "next/link";
 import LandmarkContainer from "../components/Landmarks/LandmarkContainer";
-import { useSelector, useDispatch } from "react-redux";
-import { AppActions } from "@/redux";
 
 const HomePage = () => {
-  const dispatch = useDispatch();
   // const hotelsInfo = useSelector((state: any) => state.hotels);
   const [landmarksInfo, setLandmarksInfo] = useState<any>([]);
   const [hotelsInfo, setHotelsInfo] = useState<any>([]);

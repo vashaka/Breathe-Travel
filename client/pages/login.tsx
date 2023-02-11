@@ -1,14 +1,33 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Link from "next/link";
+import axios from "axios";
+import { UserContext } from "../UserContext";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { setUser }: any = useContext(UserContext);
+
+  const submitHandler = async (e: any) => {
+    e.preventDefault();
+    try {
+      const { data } = await axios.post("http://localhost:3001/auth/login", {
+        email,
+        password,
+      });
+      setUser(data);
+
+      alert("LOGIN SUCCESSFULL");
+      // setRedirect(true);
+    } catch (err) {
+      alert("LOGIN FAILED");
+    }
+  };
   return (
     <div className="mt-4 grow flex items-center justify-around">
       <div className="mb-64">
         <h2 className="text-center font-bold mb-4">Login</h2>
-        <form className="max-w-md mx-auto">
+        <form onSubmit={submitHandler} className="max-w-md mx-auto">
           <input
             type="email"
             placeholder="your@email.com"
