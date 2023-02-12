@@ -22,14 +22,20 @@ const HomePage = () => {
         const firstFourLandmarks = data.slice(0, 4);
         setLandmarksInfo(firstFourLandmarks);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        alert("SERVER ERROR");
+        console.log(err);
+      });
     fetch("http://localhost:3001/hotels")
       .then((response) => response.json())
       .then((data) => {
         const firstFourHotels = data.slice(0, 4);
         setHotelsInfo(firstFourHotels);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        alert("SERVER ERROR");
+        console.log(err);
+      });
   }, []);
 
   return (
