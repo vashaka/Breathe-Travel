@@ -72,7 +72,10 @@ const HotelContainer = ({ hotel }) => {
         </div>
       </div>
       <div className="flex justify-center mt-4">
-        <button className="btn flex flex-1">Details</button>
+        <button className="btn flex flex-1 mr-1">Details</button>
+        <button className="btn flex flex-1 mr-1 bg-[#d30953]">
+          Add to cart
+        </button>
       </div>
     </div>
   );

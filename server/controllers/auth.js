@@ -60,3 +60,11 @@ exports.getProfile = (req, res) => {
     res.json(null);
   }
 };
+
+exports.logOutUser = (req, res) => {
+  User.findByIdAndRemove(req.body.id)
+    .then((user) => {
+      res.cookie("token", "").json(user);
+    })
+    .catch((err) => res.status(404).json(err));
+};

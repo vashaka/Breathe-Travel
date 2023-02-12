@@ -11,7 +11,11 @@ const Login = () => {
   const [incorect, setIncorect] = useState(false);
   const [active, setActive] = useState(false);
   const [isFound, setIsFound] = useState(true);
-  const { setUser }: any = useContext(UserContext);
+  const { setUser, user }: any = useContext(UserContext);
+
+  if (user && router.pathname === "/login") {
+    router.push("/profile");
+  }
 
   useEffect(() => {
     if (active) {
@@ -41,8 +45,8 @@ const Login = () => {
           email,
           password,
         });
+        await router.push("/");
         setUser(data);
-        router.push("/");
         setIncorect(false);
 
         // alert("LOGIN SUCCESSFULL");

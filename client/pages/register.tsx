@@ -1,11 +1,19 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Link from "next/link";
 import axios from "axios";
+import { useRouter } from "next/router";
+import { UserContext } from "../UserContext";
 
 const Register = () => {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { setUser, user }: any = useContext(UserContext);
+
+  if (user && router.pathname === "/register") {
+    router.push("/profile");
+  }
 
   const submitHandler = async (e: any) => {
     e.preventDefault();
@@ -15,6 +23,7 @@ const Register = () => {
         email,
         password,
       });
+      router.push("/login");
       alert("RESGISTRATION SUCCESSFULL, NOW LOG IN");
       // setRedirect(true);
     } catch (err) {

@@ -36,14 +36,21 @@ textarea {
   }
 }
 
-body {
-  /* margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  width: 150%; */
-  /* margin: auto; */
-  /* font-family: "Raleway", sans-serif; */
+.button {
+  width: 100%;
+  background: hsl(338, 92%, 53%);
+  padding-left: 8rem /* 128px */;
+  padding-right: 8rem;
+  padding-top: 0.5rem /* 8px */;
+  padding-bottom: 0.5rem;
+  border-radius: 9999px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: hsl(338, 92%, 43%);
 }
 
 .contr {
@@ -124,7 +131,7 @@ body {
 }
 
 .btn:hover {
-  background-color: hsl(338, 92%, 43%);
+  background-color: #d30953;
 }
 
 .LandMarksContainer {
@@ -153,6 +160,7 @@ body {
   grid-gap: 10px;
   grid-template-columns: 2fr 1fr;
 }
+
 /* Anything udner 1024px */
 @media screen and (max-width: 1024px) {
   .image-grid {
