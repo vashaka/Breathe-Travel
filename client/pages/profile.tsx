@@ -1,13 +1,18 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "@/UserContext";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Router from "next/router";
 
 const Profile = () => {
   const router = useRouter();
   const { user, setUser }: any = useContext(UserContext);
 
-  console.log(user);
+  useEffect(() => {
+    if (!user) {
+      Router.push("/login");
+    }
+  }, [user]);
 
   const clickHandler = (e: any) => {
     e.preventDefault();
@@ -20,13 +25,18 @@ const Profile = () => {
         setUser(null);
       });
   };
+
   return (
-    <div>
-      <button onClick={clickHandler} className="button">
-        Delete user
-      </button>
-      <p>Logged In as ({user?.email})</p>
-    </div>
+    <>
+      {user && (
+        <div>
+          <button onClick={clickHandler} className="button">
+            Delete user
+          </button>
+          <p>Logged In as ({user?.email})</p>
+        </div>
+      )}
+    </>
   );
 };
 
