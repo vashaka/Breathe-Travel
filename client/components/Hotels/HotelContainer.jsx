@@ -1,12 +1,9 @@
 import React from "react";
+import Link from "next/link";
 
 const HotelContainer = ({ hotel }) => {
   return (
-    <div
-      className="mt-6 relative hover:cursor-pointer w-auto md:w-[300px] 
-
-    "
-    >
+    <div className="mt-6 relative hover:cursor-pointer w-auto md:w-[300px]">
       <img
         src={hotel?.imageUrl}
         className="rounded-2xl object-cover aspect-square"
@@ -73,9 +70,11 @@ const HotelContainer = ({ hotel }) => {
       </div>
       <div className="flex justify-center mt-4">
         <button className="btn flex flex-1 mr-1">Details</button>
-        <button className="btn flex flex-1 mr-1 bg-[#d30953]">
-          Add to cart
-        </button>
+        <Link href={"/profile"}>
+          <button className="btn flex flex-1 mr-1 bg-[#d30953]">
+            Add to cart
+          </button>
+        </Link>
       </div>
     </div>
   );

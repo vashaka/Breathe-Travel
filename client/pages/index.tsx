@@ -7,7 +7,7 @@ import PlanContainer from "./../components/Plans/PlanContainer";
 import HotelContainer from "../components/Hotels/HotelContainer";
 import Link from "next/link";
 import LandmarkContainer from "../components/Landmarks/LandmarkContainer";
-import { UserContext } from "../UserContext";
+import { UserContext } from "../context/UserContext";
 
 const HomePage = () => {
   const { user }: any = useContext(UserContext);
@@ -52,7 +52,7 @@ const HomePage = () => {
       <div className="max-w-[1440px] m-auto py-16 px-4 relative">
         <div className="flex justify-center mb-1">
           <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm">
-            2 step -
+            step 2 -
           </h1>
           <h1 className="text-white text-xs">h</h1>
           <h1 className="text-xl text-[#f51767] mt-1">Choose Your Landmarks</h1>
@@ -81,7 +81,7 @@ const HomePage = () => {
       <div className="max-w-[1440px] m-auto py-16 px-4 relative">
         <div className="flex justify-center mb-1">
           <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm">
-            3 step -
+            step 3 -
           </h1>
           <h1 className="text-white text-xs">h</h1>
           <h1 className="text-xl text-[#f51767] mt-1">Choose Your Hotels</h1>

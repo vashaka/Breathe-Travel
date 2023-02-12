@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { UserContext } from "../UserContext";
+import { UserContext } from "../context/UserContext";
 
 const Register = () => {
   const router = useRouter();

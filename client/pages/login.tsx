@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 import axios from "axios";
-import { UserContext } from "../UserContext";
+import { UserContext } from "../context/UserContext";
 import { useRouter } from "next/router";
 
 const Login = () => {

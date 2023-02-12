@@ -3,7 +3,7 @@ import HotelContainer from "../../components/Hotels/HotelContainer";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { UserContext } from "@/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 const HotelsPage = () => {
   const { user }: any = useContext(UserContext);

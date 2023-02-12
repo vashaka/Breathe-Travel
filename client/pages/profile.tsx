@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { UserContext } from "@/UserContext";
+import { UserContext } from "@/context/UserContext";
 import axios from "axios";
 import { useRouter } from "next/router";
 import Router from "next/router";

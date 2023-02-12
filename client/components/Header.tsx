@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { UserContext } from "../UserContext";
+import { UserContext } from "../context/UserContext";
 
 const Header = () => {
   const { user }: any = useContext(UserContext);

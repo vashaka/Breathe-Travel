@@ -1,20 +1,14 @@
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { useSelector, useDispatch } from "react-redux";
 
-const MapComponent = ({ x, y }) => {
-  // const selectedDestination = useSelector((state) => state.selectedDestination);
-  // const coordinates = useSelector((state) => state.coordinates);
-  // const qutaisi = useSelector((state) => state.qutaisi); // Testing
-
+const MapComponent = ({ x, y }: any) => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyCzTm9ZhDTvk1dTqrtD1F2YYcWk9WbHQ7o",
   });
 
   if (!isLoaded) return <div>Loading...</div>;
 
-  // we can use marker if we want it on map
-
-  const zoomLevel = 9;
+  const zoomLevel = 8;
 
   console.log(x);
   return (
