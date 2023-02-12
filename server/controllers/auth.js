@@ -44,7 +44,7 @@ exports.loginUser = async (req, res) => {
       res.status(422).json("pass not ok");
     }
   } else {
-    res.json("not found");
+    res.status(404).json("not found");
   }
 };
 

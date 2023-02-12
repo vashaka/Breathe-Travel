@@ -9,16 +9,6 @@ const Register = () => {
 
   const submitHandler = async (e: any) => {
     e.preventDefault();
-    //     axios
-    //       .post("/register", {
-    //         name,
-    //         email,
-    //         password,
-    //       })
-    //       .then((data) => data.json())
-    //       .then((user) => console.log(user))
-    //       .catch((err) => console.log(err));
-    //   };
     try {
       await axios.post("http://localhost:3001/auth/register", {
         name,

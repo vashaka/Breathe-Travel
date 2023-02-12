@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useContext } from "react";
 import ImageSlider from "./../components/ImageSlider";
 import { SliderData } from "../data/SliderData";
 import GeoMap from "./../components/GeoMap";
@@ -7,8 +7,10 @@ import PlanContainer from "./../components/Plans/PlanContainer";
 import HotelContainer from "../components/Hotels/HotelContainer";
 import Link from "next/link";
 import LandmarkContainer from "../components/Landmarks/LandmarkContainer";
+import { UserContext } from "../UserContext";
 
 const HomePage = () => {
+  const { user }: any = useContext(UserContext);
   // const hotelsInfo = useSelector((state: any) => state.hotels);
   const [landmarksInfo, setLandmarksInfo] = useState<any>([]);
   const [hotelsInfo, setHotelsInfo] = useState<any>([]);

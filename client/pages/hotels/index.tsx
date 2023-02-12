@@ -1,10 +1,12 @@
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useContext } from "react";
 import HotelContainer from "../../components/Hotels/HotelContainer";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { UserContext } from "@/UserContext";
 
 const HotelsPage = () => {
+  const { user }: any = useContext(UserContext);
   const router = useRouter();
   const [hotelsInfo, setHotelsInfo] = useState<any[]>([]);
   useMemo(() => {
