@@ -7,6 +7,7 @@ import store from "../redux";
 import { UserContextProvider } from "../context/UserContext";
 
 import axios from "axios";
+import Chat from "@/components/Chat";
 
 axios.defaults.withCredentials = true;
 

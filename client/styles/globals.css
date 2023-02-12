@@ -51,6 +51,7 @@ textarea {
 
 .button:hover {
   background: hsl(338, 92%, 43%);
+  /* background: #7a7acd; */
 }
 
 .contr {
