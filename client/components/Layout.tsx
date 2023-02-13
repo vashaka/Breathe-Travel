@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import React from "react";
 import Chat from "./Chat";
 import Header from "./Header";
@@ -16,7 +16,6 @@ const Layout = ({ children }: any) => {
       {user && <Chat />}
       {!user && (
         <Link
-          onClick={() => alert("You need to Log In or register first")}
           href={"/login"}
           className="cursor-default z-50 fixed right-0 top-0 bottom-0"
         >
@@ -31,6 +30,7 @@ const Layout = ({ children }: any) => {
               style={{ fontSize: "35px" }}
               className=""
             />
+            <div className="bg-red-500 w-4 h-4 rounded-full absolute top-0 right-0"></div>
           </div>
         </Link>
       )}

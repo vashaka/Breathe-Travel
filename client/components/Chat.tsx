@@ -21,7 +21,8 @@ function Chat() {
         id: user ? user._id : Math.floor(Math.random() * 1000000000000),
         name: user ? user.name : "anonymous",
         email: user ? user.email : "Anonymous@gmail.com",
-        photoUrl: "henry.jpeg",
+        photoUrl:
+          "https://i.pinimg.com/280x280_RS/2e/45/66/2e4566fd829bcf9eb11ccdb5f252b02f.jpg",
         welcomeMessage: "Hello!",
         role: "default",
       });
@@ -57,7 +58,7 @@ function Chat() {
   return (
     <div className="z-50 fixed right-0 top-0 bottom-0">
       <div
-        className="z-40 absolute bottom-10 right-10 rounded-full h-14 w-14 bg-white flex justify-center items-center"
+        className="z-40 border absolute bottom-10 right-10 rounded-full h-14 w-14 bg-white flex justify-center items-center"
         style={{
           boxShadow: "0 20px 25px -5px #7a7acd, 0 8px 10px -6px #7a7acd",
         }}
@@ -67,6 +68,9 @@ function Chat() {
           style={{ fontSize: "35px" }}
           className="z-30"
         />
+        {open && (
+          <div className="bg-red-500 w-4 h-4 rounded-full absolute top-0 right-0"></div>
+        )}
       </div>
       <div className="w-auto fixed -right-20 smd:right-0 bottom-12 z-10">
         <div

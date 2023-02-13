@@ -36,6 +36,17 @@ textarea {
   }
 }
 
+.animated-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .button {
   width: 100%;
   background: hsl(338, 92%, 53%);

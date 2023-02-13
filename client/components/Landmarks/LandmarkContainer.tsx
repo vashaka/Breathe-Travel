@@ -41,7 +41,7 @@ const LandmarkContainer = ({ landmark }: Object) => {
       <h4 className="text-gray-400 font-normal">{landmark?.reviews} reviews</h4>
       <div className="flex relative">
         <h4>
-          {landmark?.price}$ <span className="text-gray-600">night</span>
+          {landmark?.price}$ <span className="text-gray-600">to travel</span>
         </h4>
         <div className="flex absolute right-0 top-1">
           <svg
