@@ -57,7 +57,7 @@ function Chat() {
   return (
     <div className="z-50 fixed right-0 top-0 bottom-0">
       <div
-        className="z-20 absolute bottom-10 right-10 rounded-full h-14 w-14 bg-white flex justify-center items-center"
+        className="z-40 absolute bottom-10 right-10 rounded-full h-14 w-14 bg-white flex justify-center items-center"
         style={{
           boxShadow: "0 20px 25px -5px #7a7acd, 0 8px 10px -6px #7a7acd",
         }}
@@ -65,10 +65,10 @@ function Chat() {
         <SiMessenger
           onClick={() => setOpen(!open)}
           style={{ fontSize: "35px" }}
-          className=""
+          className="z-30"
         />
       </div>
-      <div className="w-auto fixed smd:right-0 bottom-12 z-10">
+      <div className="w-auto fixed -right-20 smd:right-0 bottom-12 z-10">
         <div
           ref={chatboxEl}
           className=""

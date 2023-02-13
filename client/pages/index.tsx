@@ -50,8 +50,13 @@ const HomePage = () => {
       </div>
       <hr />
       <div className="max-w-[1440px] m-auto py-16 px-4 relative">
-        <div className="flex justify-center mb-1">
-          <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm">
+        <div
+          style={{
+            whiteSpace: "nowrap",
+          }}
+          className="flex justify-center mb-1"
+        >
+          <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm h-full">
             step 2 -
           </h1>
           <h1 className="text-white text-xs">h</h1>
@@ -79,8 +84,13 @@ const HomePage = () => {
       </div>
       <hr />
       <div className="max-w-[1440px] m-auto py-16 px-4 relative">
-        <div className="flex justify-center mb-1">
-          <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm">
+        <div
+          style={{
+            whiteSpace: "nowrap",
+          }}
+          className="flex justify-center mb-1"
+        >
+          <h1 className="h-full text-white bg-[#f51767] px-2 py-1 rounded-sm">
             step 3 -
           </h1>
           <h1 className="text-white text-xs">h</h1>

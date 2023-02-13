@@ -39,7 +39,7 @@ const Profile = () => {
           <button onClick={clickHandler} className="button">
             Delete user
           </button>
-          <div onClick={logout} className="button mt-8">
+          <div onClick={logout} className="button mt-2">
             Log out
           </div>
           <p>Logged In as ({user?.email})</p>

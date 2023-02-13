@@ -16,6 +16,7 @@ const Layout = ({ children }: any) => {
       {user && <Chat />}
       {!user && (
         <Link
+          onClick={() => alert("You need to Log In or register first")}
           href={"/login"}
           className="cursor-default z-50 fixed right-0 top-0 bottom-0"
         >
