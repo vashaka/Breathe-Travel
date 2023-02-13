@@ -18,7 +18,7 @@ function Chat() {
 
     if (talkLoaded) {
       const currentUser = new Talk.User({
-        id: user ? user._id : "123456",
+        id: user ? user._id : Math.floor(Math.random() * 1000000000000),
         name: user ? user.name : "anonymous",
         email: user ? user.email : "Anonymous@gmail.com",
         photoUrl: "henry.jpeg",
@@ -28,10 +28,11 @@ function Chat() {
 
       const otherUser = new Talk.User({
         id: "2",
-        name: "traveling web",
-        email: "datodavit07@.com",
-        photoUrl: "jessica.jpeg",
-        welcomeMessage: "Hello!",
+        name: "Travel To Geo",
+        email: "datodavit07@gmail.com",
+        photoUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/1200px-Flag_of_Georgia.svg.png",
+        welcomeMessage: "How can we help you?",
         role: "default",
       });
 
@@ -67,7 +68,7 @@ function Chat() {
           className=""
         />
       </div>
-      <div className="w-auto fixed -right-20 bottom-12 z-10">
+      <div className="w-auto fixed smd:right-0 bottom-12 z-10">
         <div
           ref={chatboxEl}
           className=""

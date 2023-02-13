@@ -62,6 +62,13 @@ exports.getProfile = (req, res) => {
 };
 
 exports.logOutUser = (req, res) => {
+  const { token } = req.cookies;
+  if (token) {
+    res.cookie("token", "").json("logged out successfully!");
+  }
+};
+
+exports.removeUser = (req, res) => {
   User.findByIdAndRemove(req.body.id)
     .then((user) => {
       res.cookie("token", "").json(user);
