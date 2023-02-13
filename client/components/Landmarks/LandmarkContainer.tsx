@@ -10,8 +10,10 @@ const LandmarkContainer = ({ landmark }: Object) => {
     >
       <img
         src={landmark?.imageUrl}
-        className="rounded-2xl object-cover aspect-square"
+        className="rounded-2xl object-cover aspect-square h-full w-full"
         alt="landmark-image"
+        // height={200}
+        // width={350}
       />
       <div className="flex items-center">
         <h4 className="mt-1">{landmark?.title}</h4>
