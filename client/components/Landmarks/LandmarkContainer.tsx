@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const LandmarkContainer = ({ landmark }: Object) => {
+const LandmarkContainer = ({ landmark }: any) => {
   return (
     <div
       className="mt-6 relative hover:cursor-pointer w-auto md:w-[300px] 
