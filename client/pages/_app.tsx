@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "../components/Layout";
@@ -7,7 +7,6 @@ import store from "../redux";
 import { UserContextProvider } from "../context/UserContext";
 
 import axios from "axios";
-import Chat from "@/components/Chat";
 
 axios.defaults.withCredentials = true;
 

@@ -6,7 +6,7 @@ const HotelContainer = ({ hotel }) => {
     <div className="mt-6 relative hover:cursor-pointer w-auto md:w-[300px]">
       <img
         src={hotel?.imageUrl}
-        className="rounded-2xl object-cover aspect-square"
+        className="rounded-2xl object-cover aspect-square h-full w-full"
         alt="Hotel-image"
       />
       <div className="flex items-center">

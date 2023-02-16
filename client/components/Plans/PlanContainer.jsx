@@ -5,8 +5,13 @@ import Plan from "./Plan";
 const PlanContainer = () => {
   return (
     <div className="max-w-[1240px] m-auto py-16 px-4 text-center z-10 mt-0">
-      <div className="flex justify-center">
-        <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm">
+      <div
+        style={{
+          whiteSpace: "nowrap",
+        }}
+        className="flex justify-center"
+      >
+        <h1 className="flex text-white bg-[#f51767] px-2 py-1 rounded-sm h-full">
           step 1 -
         </h1>
         <h1 className="text-white text-xs">h</h1>

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import React from "react";
 import Chat from "./Chat";
 import Header from "./Header";
@@ -30,6 +30,7 @@ const Layout = ({ children }: any) => {
               style={{ fontSize: "35px" }}
               className=""
             />
+            <div className="bg-red-500 w-4 h-4 rounded-full absolute top-0 right-0"></div>
           </div>
         </Link>
       )}

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const LandmarkContainer = ({ landmark }: Object) => {
+const LandmarkContainer = ({ landmark }: any) => {
   return (
     <div
       className="mt-6 relative hover:cursor-pointer w-auto md:w-[300px] 
@@ -10,8 +10,10 @@ const LandmarkContainer = ({ landmark }: Object) => {
     >
       <img
         src={landmark?.imageUrl}
-        className="rounded-2xl object-cover aspect-square"
+        className="rounded-2xl object-cover aspect-square h-full w-full"
         alt="landmark-image"
+        // height={200}
+        // width={350}
       />
       <div className="flex items-center">
         <h4 className="mt-1">{landmark?.title}</h4>
@@ -39,7 +41,7 @@ const LandmarkContainer = ({ landmark }: Object) => {
       <h4 className="text-gray-400 font-normal">{landmark?.reviews} reviews</h4>
       <div className="flex relative">
         <h4>
-          {landmark?.price}$ <span className="text-gray-600">night</span>
+          {landmark?.price}$ <span className="text-gray-600">to travel</span>
         </h4>
         <div className="flex absolute right-0 top-1">
           <svg
