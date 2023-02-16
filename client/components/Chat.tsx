@@ -68,7 +68,7 @@ function Chat() {
           className=""
         />
       </div>
-      <div className="w-auto fixed smd:right-0 bottom-12 z-10">
+      <div className="w-auto fixed right-0 bottom-12 z-10">
         <div
           ref={chatboxEl}
           className=""
