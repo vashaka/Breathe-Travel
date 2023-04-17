@@ -14,7 +14,7 @@ const Login = () => {
   const { setUser, user }: any = useContext(UserContext);
 
   if (user && router.pathname === "/login") {
-    router.push("/profile");
+    router.push("/cart");
   }
 
   useEffect(() => {
@@ -85,7 +85,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             className={incorect ? "bg-red-100" : ""}
           />
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-2">
             <button className="btn">Login</button>
           </div>
           <div className="text-center py-2 font-semibold text-gray-500">

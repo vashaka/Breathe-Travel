@@ -30,9 +30,10 @@ const HotelsPage = () => {
         {hotelsInfo.length > 0 &&
           hotelsInfo.map((hotel) => {
             return (
-              <Link key={hotel._id} href={`/hotels/${hotel._id}`}>
+              // <Link key={hotel._id} href={`/hotels/${hotel._id}`}>
+              <div key={hotel._id}>
                 <HotelContainer hotel={hotel} />
-              </Link>
+              </div>
             );
           })}
       </div>

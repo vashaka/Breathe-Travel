@@ -4,7 +4,7 @@ import Link from "next/link";
 import LandmarkContainer from "../../components/Landmarks/LandmarkContainer";
 
 const LandmarksPage = () => {
-  const [landmarksInfo, setLandmarksInfo] = useState([]);
+  const [landmarksInfo, setLandmarksInfo] = useState<any>([]);
   useMemo(() => {
     fetch("http://localhost:3001/landmarks")
       .then((response) => response.json())
@@ -26,9 +26,10 @@ const LandmarksPage = () => {
         {landmarksInfo.length > 0 &&
           landmarksInfo.map((landmark) => {
             return (
-              <Link key={landmark._id} href={`/landmarks/${landmark._id}`}>
+              // <Link key={landmark._id} href={`/landmarks/${landmark._id}`}>
+              <div key={landmark._id}>
                 <LandmarkContainer landmark={landmark} />
-              </Link>
+              </div>
             );
           })}
       </div>

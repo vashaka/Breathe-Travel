@@ -4,7 +4,7 @@ import { UserContext } from "../context/UserContext";
 import { SiMessenger } from "react-icons/si";
 
 function Chat() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const { user }: any = useContext(UserContext);
   const chatboxEl = useRef();
 
@@ -72,7 +72,11 @@ function Chat() {
           <div className="bg-red-500 w-4 h-4 rounded-full absolute top-0 right-0"></div>
         )}
       </div>
-      <div className="w-auto fixed -right-20 smd:right-0 bottom-12 z-10">
+      <div
+        className={`${
+          open ? "w-full" : "w-none"
+        } absolute -right-20 smd:right-0 bottom-12 z-10`}
+      >
         <div
           ref={chatboxEl}
           className=""

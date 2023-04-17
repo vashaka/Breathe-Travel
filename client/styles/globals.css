@@ -20,19 +20,19 @@ textarea {
 @layer components {
   h1 {
     /* @apply text-3xl font-bold; */
-    @apply text-lg md:text-xl font-bold;
+    @apply text-lg md:text-xl font-bold text-[#324d67];
   }
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold text-[#324d67];
   }
   h3 {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold text-[#324d67];
   }
   h4 {
-    @apply text-sm font-medium;
+    @apply text-sm font-medium text-[#324d67];
   }
   p {
-    @apply text-lg font-normal;
+    @apply text-lg font-normal text-[#324d67];
   }
 }
 
@@ -48,7 +48,8 @@ textarea {
 }
 
 .button {
-  width: 100%;
+  width: 400px;
+  /* max-width: ; */
   background: hsl(338, 92%, 53%);
   padding-left: 8rem /* 128px */;
   padding-right: 8rem;
@@ -58,6 +59,8 @@ textarea {
   color: white;
   font-weight: 600;
   text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .button:hover {
@@ -141,6 +144,28 @@ textarea {
   background-color: hsl(338, 92%, 53%);
   color: white;
 }
+.btn-added {
+  border: 1px solid #f51767;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: max-content;
+  border-radius: 5px;
+
+  height: 35px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0px 20px;
+  background: hsl(338, 92%, 40%);
+  color: white;
+}
 
 .btn:hover {
   background-color: #d30953;
@@ -173,10 +198,43 @@ textarea {
   grid-template-columns: 2fr 1fr;
 }
 
+.maylike-products-wrapper {
+  margin-top: 120px;
+}
+
+.maylike-products-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.track {
+  animation: marquee 12s linear infinite;
+  width: 350%;
+}
+
+.marquee {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* Anything udner 1024px */
 @media screen and (max-width: 1024px) {
   .image-grid {
     --num-cols: 2;
     --row-height: 200px;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }

@@ -1,16 +1,27 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, useContext } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import MapComponent from "./../../components/MapComponent";
+import HotelContainer from "../../components/Hotels/HotelContainer";
 
 const SingleLandmark = () => {
+  const [hotelsInfo, setHotelsInfo] = useState<any[]>([]);
   const [landmark, setLandmark] = useState<any>([]);
   const [error, setError] = useState(false);
   const [clicked, setClicked] = useState<boolean>(false);
 
   const router = useRouter();
   const id = router.query.landmarkId;
+
+  useMemo(() => {
+    fetch("http://localhost:3001/hotels")
+      .then((response) => response.json())
+      .then((data) => {
+        setHotelsInfo(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:3001/landmarks/" + id)
@@ -60,6 +71,7 @@ const SingleLandmark = () => {
             // style={{ borderRadius: "0px 0px 20px 0px" }}
           />
         </div>
+        <h1 className="text-center">About {landmark.title}</h1>
         <div
           className="grid grid-cols-[2fr,1fr] m-6"
           // style={{ gridTemplateColumns: "repeat(3, minmax(0, 1fr))" }}
@@ -85,8 +97,8 @@ const SingleLandmark = () => {
               </span>
             </p>
           )}
-          <div className="bg-white w-full shadow-2xl h-full rounded-xl">
-            <p>{landmark.price}$</p>
+          <div className="bg-[#E4F4FF] w-full h-full rounded-xl border border-2-[rgb(42,42,42)]">
+            <p className="text-center">{landmark.title}</p>
           </div>
         </div>
         <div className="flex justify-center mb-1">
@@ -100,6 +112,18 @@ const SingleLandmark = () => {
         </div>
       </div>
       {landmark.x && <MapComponent x={landmark.x} y={landmark.y} />}
+      {/* {hotelsInfo && (
+        <div className="maylike-products-wrapper overflow-hidden">
+          <h2>You may also like</h2>
+          <div className="marquee">
+            <div className="maylike-products-container track">
+              {hotelsInfo.map((hotel) => (
+                <HotelContainer key={hotel._id} hotel={hotel} />
+              ))}
+            </div>
+          </div>
+        </div>
+      )} */}
     </div>
   );
 };

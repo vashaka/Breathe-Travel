@@ -73,7 +73,10 @@ const Header = () => {
               Home
             </Link>
           ) : (
-            <Link href="/" className="text-[15px] cursor-pointer font-semibold">
+            <Link
+              href="/"
+              className="text-[15px] cursor-pointer font-semibold text-[#324d67]"
+            >
               Home
             </Link>
           )}
@@ -90,7 +93,7 @@ const Header = () => {
           ) : (
             <Link
               href="/landmarks"
-              className="text-[15px] cursor-pointer font-semibold"
+              className="text-[15px] cursor-pointer font-semibold text-[#324d67]"
             >
               Landmarks
             </Link>
@@ -108,7 +111,7 @@ const Header = () => {
           ) : (
             <Link
               href="/hotels"
-              className="text-[15px] cursor-pointer font-semibold"
+              className="text-[15px] cursor-pointer font-semibold text-[#324d67]"
             >
               Hotels
             </Link>
@@ -126,7 +129,7 @@ const Header = () => {
           ) : (
             <Link
               href="/cars"
-              className="text-[15px] cursor-pointer font-semibold"
+              className="text-[15px] cursor-pointer font-semibold text-[#324d67]"
             >
               cars
               {/* <span className="text-white">iw</span> */}
@@ -150,7 +153,7 @@ const Header = () => {
         </button> */}
         </div>
         <Link
-          href={user ? "/profile" : "/login"}
+          href={user ? "/cart" : "/login"}
           className="font-semisemibold flex items-center gap-2 border border-gray-300 rounded-full py-2 px-4 shadow-md"
         >
           <svg
@@ -164,7 +167,7 @@ const Header = () => {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
             />
           </svg>
 

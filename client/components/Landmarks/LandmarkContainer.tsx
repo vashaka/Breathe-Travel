@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import { UserContext } from "@/context/UserContext";
+import { useRouter } from "next/router";
 
 const LandmarkContainer = ({ landmark }: any) => {
-  return (
-    <div
-      className="mt-6 relative hover:cursor-pointer w-auto md:w-[300px] 
+  const {
+    addToLandmarksCart,
+    landmarksCart,
+    removeLandmarkFromLandmarksCart,
+  }: any = useContext(UserContext);
+  const router = useRouter();
 
-    "
-    >
+  const lanmdarkAllreadyAddedInCart = landmarksCart.find(
+    (landmarkinCart: any) => landmarkinCart._id === landmark._id
+  );
+
+  return (
+    <div className="mt-6 relative w-auto md:w-[300px]">
       <img
         src={landmark?.imageUrl}
         className="rounded-2xl object-cover aspect-square h-full w-full"
@@ -76,11 +85,31 @@ const LandmarkContainer = ({ landmark }: any) => {
       </div>
       <div className="flex justify-center mt-4">
         <button className="btn flex flex-1 mr-1">Details</button>
-        <Link href={"/profile"}>
-          <button className="btn flex flex-1 mr-1 bg-[#d30953]">
-            Add to cart
-          </button>
-        </Link>
+        {router.pathname !== "/cart" ? (
+          landmark._id && lanmdarkAllreadyAddedInCart ? (
+            <Link href="/cart">
+              <button className="btn-added flex flex-1 mr-1">See Cart</button>
+            </Link>
+          ) : (
+            <button
+              className="btn flex flex-2 mr-1 bg-[#d30953]"
+              onClick={() => {
+                addToLandmarksCart(landmark);
+              }}
+            >
+              Add to cart
+            </button>
+          )
+        ) : (
+          <div>
+            <button
+              onClick={() => removeLandmarkFromLandmarksCart(landmark)}
+              className="btn-added flex flex-1 mr-1"
+            >
+              Remove
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

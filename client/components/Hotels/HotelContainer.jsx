@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import { UserContext } from "@/context/UserContext";
+import { useRouter } from "next/router";
 
 const HotelContainer = ({ hotel }) => {
+  const { addToHotelsCart, hotelsCart, removeHotelFromHotelsCart } =
+    useContext(UserContext);
+  const router = useRouter();
+
+  const hotelAllreadyAddedInCart = hotelsCart.find(
+    (hotelinCart) => hotelinCart._id === hotel._id
+  );
+
   return (
-    <div className="mt-6 relative hover:cursor-pointer w-auto md:w-[300px]">
+    <div className="mt-6 relative w-auto md:w-[300px]">
       <img
         src={hotel?.imageUrl}
         className="rounded-2xl object-cover aspect-square h-full w-full"
@@ -69,12 +79,34 @@ const HotelContainer = ({ hotel }) => {
         </div>
       </div>
       <div className="flex justify-center mt-4">
-        <button className="btn flex flex-1 mr-1">Details</button>
-        <Link href={"/profile"}>
-          <button className="btn flex flex-1 mr-1 bg-[#d30953]">
-            Add to cart
-          </button>
+        <Link className="flex flex-1" href={`/hotels/${hotel._id}`}>
+          <button className="btn flex flex-1 mr-1">Details</button>
         </Link>
+        {router.pathname !== "/cart" ? (
+          hotel._id && hotelAllreadyAddedInCart ? (
+            <Link href="/cart">
+              <button className="btn-added flex flex-1 mr-1">See Cart</button>
+            </Link>
+          ) : (
+            <button
+              className="btn flex flex-2 mr-1 bg-[#d30953]"
+              onClick={() => {
+                addToHotelsCart(hotel);
+              }}
+            >
+              Add to cart
+            </button>
+          )
+        ) : (
+          <div>
+            <button
+              onClick={() => removeHotelFromHotelsCart(hotel)}
+              className="btn-added flex flex-1 mr-1"
+            >
+              Remove
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

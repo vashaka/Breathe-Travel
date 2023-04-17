@@ -10,7 +10,7 @@ import LandmarkContainer from "../components/Landmarks/LandmarkContainer";
 import { UserContext } from "../context/UserContext";
 
 const HomePage = () => {
-  const { user }: any = useContext(UserContext);
+  // const { user, landmarksInfo, hotelsInfo }: any = useContext(UserContext);
   // const hotelsInfo = useSelector((state: any) => state.hotels);
   const [landmarksInfo, setLandmarksInfo] = useState<any>([]);
   const [hotelsInfo, setHotelsInfo] = useState<any>([]);
@@ -46,6 +46,7 @@ const HomePage = () => {
         </h1>
         <ImageSlider slides={SliderData} /> */}
         <GeoMap />
+
         <PlanContainer />
       </div>
       <hr />
@@ -70,9 +71,10 @@ const HomePage = () => {
           {landmarksInfo.length > 0 &&
             landmarksInfo.map((landmark: any) => {
               return (
-                <Link key={landmark._id} href={`/landmarks/${landmark._id}`}>
+                // <Link key={landmark._id} href={`/landmarks/${landmark._id}`}>
+                <div key={landmark._id}>
                   <LandmarkContainer landmark={landmark} />
-                </Link>
+                </div>
               );
             })}
         </div>
@@ -104,9 +106,10 @@ const HomePage = () => {
           {hotelsInfo.length > 0 &&
             hotelsInfo.map((hotel: any) => {
               return (
-                <Link key={hotel._id} href={`/hotels/${hotel._id}`}>
+                // <Link key={hotel._id} href={`/hotels/${hotel._id}`}>
+                <div key={hotel._id}>
                   <HotelContainer hotel={hotel} />
-                </Link>
+                </div>
               );
             })}
         </div>

@@ -12,7 +12,7 @@ const Register = () => {
   const { setUser, user }: any = useContext(UserContext);
 
   if (user && router.pathname === "/register") {
-    router.push("/profile");
+    router.push("/cart");
   }
 
   const submitHandler = async (e: any) => {
@@ -54,7 +54,7 @@ const Register = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-2">
             <button className="btn">Register</button>
           </div>
           <div className="text-center py-2 font-semibold text-gray-500">

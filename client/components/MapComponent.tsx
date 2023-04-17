@@ -10,7 +10,6 @@ const MapComponent = ({ x, y }: any) => {
 
   const zoomLevel = 8;
 
-  console.log(x);
   return (
     <>
       <div className="hidden lg:flex justify-center">
