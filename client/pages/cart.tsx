@@ -43,7 +43,7 @@ const Cart = () => {
         <div>
           <h1 className="text-center">No Landmarks Are Added To Cart</h1>
           <Link href="/landmarks" className="flex justify-center">
-            <button className="btn">Start Searching</button>
+            <button className="btn">SEE LANDMARKS</button>
           </Link>
         </div>
       )}
@@ -60,7 +60,7 @@ const Cart = () => {
         <div>
           <h1 className="text-center">No Hotels Are Added To Cart</h1>
           <Link href="/hotels" className="flex justify-center">
-            <button className="btn">Start Searching</button>
+            <button className="btn">SEE HOTELS</button>
           </Link>
         </div>
       )}

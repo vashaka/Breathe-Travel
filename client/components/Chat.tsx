@@ -56,9 +56,9 @@ function Chat() {
   }, [talkLoaded, user]);
 
   return (
-    <div className="z-50 fixed right-0 top-0 bottom-0">
+    <div className="z-[110] fixed right-0 top-0 bottom-0">
       <div
-        className="z-40 border absolute bottom-10 right-10 rounded-full h-14 w-14 bg-white flex justify-center items-center"
+        className="z-[140] border absolute bottom-10 right-10 rounded-full h-14 w-14 bg-white flex justify-center items-center"
         style={{
           boxShadow: "0 20px 25px -5px #7a7acd, 0 8px 10px -6px #7a7acd",
         }}
@@ -66,7 +66,7 @@ function Chat() {
         <SiMessenger
           onClick={() => setOpen(!open)}
           style={{ fontSize: "35px" }}
-          className="z-30"
+          className="z-[140]"
         />
         {open && (
           <div className="bg-red-500 w-4 h-4 rounded-full absolute top-0 right-0"></div>
@@ -75,7 +75,7 @@ function Chat() {
       <div
         className={`${
           open ? "w-full" : "w-none"
-        } absolute -right-20 smd:right-0 bottom-12 z-10`}
+        } absolute -right-20 smd:right-0 bottom-12 z-[130]`}
       >
         <div
           ref={chatboxEl}

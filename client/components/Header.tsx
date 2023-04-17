@@ -48,7 +48,7 @@ const Header = () => {
 
   return (
     <div
-      className="z-20"
+      className="z-[110]"
       style={{
         position: "fixed",
         top: 0,
@@ -58,7 +58,7 @@ const Header = () => {
         borderBottom: "0.5px solid hsl(0, 0%, 88%)",
       }}
     >
-      <div className="px-8 md:px-28 py-6 flex justify-between items-center bg-white opacity-95">
+      <div className="px-8 md:px-28 py-6 flex justify-between items-center bg-white opacity-100">
         <div className="flex justify-center">
           <Link href={"/"} className="smd:flex hidden items-center gap-1">
             <p className="font-bold text-2xl text-red-700">Breathe.</p>
@@ -116,15 +116,14 @@ const Header = () => {
               Hotels
             </Link>
           )}
-          <div className="border-l border-gray-300"></div>
+          {/* <div className="border-l border-gray-300"></div> */}
           {/* cars */}
-          {url === "/cars" ? (
+          {/* {url === "/cars" ? (
             <Link
               href="/cars"
               className="text-[15px] cursor-pointer text-gray-400 font-semibold"
             >
               cars
-              {/* <span className="text-white">iw</span> */}
             </Link>
           ) : (
             <Link
@@ -132,9 +131,8 @@ const Header = () => {
               className="text-[15px] cursor-pointer font-semibold text-[#324d67]"
             >
               cars
-              {/* <span className="text-white">iw</span> */}
             </Link>
-          )}
+          )} */}
           {/* <button className="bg-red-500 text-white p-2 top-[15%] absolute right-1 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"

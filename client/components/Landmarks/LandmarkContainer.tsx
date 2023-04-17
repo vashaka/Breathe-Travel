@@ -84,7 +84,9 @@ const LandmarkContainer = ({ landmark }: any) => {
         </div>
       </div>
       <div className="flex justify-center mt-4">
-        <button className="btn flex flex-1 mr-1">Details</button>
+        <Link className="flex flex-1" href={`/landmarks/${landmark._id}`}>
+          <button className="btn flex flex-1 mr-1">Details</button>
+        </Link>
         {router.pathname !== "/cart" ? (
           landmark._id && lanmdarkAllreadyAddedInCart ? (
             <Link href="/cart">

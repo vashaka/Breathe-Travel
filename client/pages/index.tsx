@@ -40,13 +40,13 @@ const HomePage = () => {
 
   return (
     <div>
+      <h1>WELCOME TO GEO</h1>
       <div className="grid md:grid-cols-2">
         {/* <h1 className="text-center">
           We'll travel you Everywhere in this stunning country
         </h1>
         <ImageSlider slides={SliderData} /> */}
         <GeoMap />
-
         <PlanContainer />
       </div>
       <hr />
@@ -55,19 +55,19 @@ const HomePage = () => {
           style={{
             whiteSpace: "nowrap",
           }}
-          className="flex justify-center mb-1"
+          className="flex justify-center mb-1 sticky top-[92px] z-[100] md:flex md:static h-10 md:bg-transparent w-[100%] mx-auto md:h-auto opacity-95 rounded-md md:rounded-none bg-white"
         >
           <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm h-full">
             step 2 -
           </h1>
-          <h1 className="text-white text-xs">h</h1>
+          <h1 className="text-transparent text-xs">h</h1>
           <h1 className="text-xl text-[#f51767] mt-1">Choose Your Landmarks</h1>
+          <p className="text-md mb-1 mt-10 text-center absolute  md:bg-transparent text-[#324d67] rounded-md md:rounded-none bg-white">
+            // Tap on your favourite and check it on the map
+          </p>
         </div>
 
-        <p className="text-md mb-1 text-center">
-          // Tap on your favourite and check it on the map
-        </p>
-        <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] mx-auto max-w-max">
+        <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] mx-auto max-w-max mt-4">
           {landmarksInfo.length > 0 &&
             landmarksInfo.map((landmark: any) => {
               return (
@@ -90,19 +90,19 @@ const HomePage = () => {
           style={{
             whiteSpace: "nowrap",
           }}
-          className="flex justify-center mb-1"
+          className="flex justify-center mb-1 sticky top-[92px] z-[100] md:flex md:static h-10 md:bg-transparent w-[100%] mx-auto md:h-auto opacity-95 rounded-md md:rounded-none bg-white"
         >
           <h1 className="h-full text-white bg-[#f51767] px-2 py-1 rounded-sm">
             step 3 -
           </h1>
-          <h1 className="text-white text-xs">h</h1>
+          <h1 className="text-transparent text-xs">h</h1>
           <h1 className="text-xl text-[#f51767] mt-1">Choose Your Hotels</h1>
+          <p className="text-md mb-1 mt-10 text-center absolute  md:bg-transparent text-[#324d67] rounded-md md:rounded-none bg-white">
+            // ADD YOUR FAV HOTELS TO CART
+          </p>
         </div>
 
-        <p className="text-md mb-1 text-center">
-          // Tap on your favourite hotel and check the recommended landmarks
-        </p>
-        <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] mx-auto max-w-max">
+        <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] mx-auto max-w-max mt-4">
           {hotelsInfo.length > 0 &&
             hotelsInfo.map((hotel: any) => {
               return (
@@ -119,6 +119,43 @@ const HomePage = () => {
           </Link>
         )}
       </div>
+
+      {/* <hr />
+      <div className="max-w-[1440px] m-auto py-16 px-4 relative">
+        <div
+          style={{
+            whiteSpace: "nowrap",
+          }}
+          className="flex justify-center mb-1"
+        >
+          <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm h-full">
+            step 4 -
+          </h1>
+          <h1 className="text-white text-xs">h</h1>
+          <h1 className="text-xl text-[#f51767] mt-1">Choose Your Cars</h1>
+        </div>
+
+        <p className="text-md mb-1 text-center">
+          // Tap on your favourite and check it on the map
+        </p>
+        <div className="grid grid-cols-1 smd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] mx-auto max-w-max">
+          {landmarksInfo.length > 0 &&
+            landmarksInfo.map((landmark: any) => {
+              return (
+                // <Link key={landmark._id} href={`/landmarks/${landmark._id}`}>
+                <div key={landmark._id}>
+                  <LandmarkContainer landmark={landmark} />
+                </div>
+              );
+            })}
+        </div>
+        {landmarksInfo.length > 0 && (
+          <Link href="/landmarks" className="flex justify-center mt-8">
+            <button className="btn">Load More...</button>
+          </Link>
+        )} 
+      </div>
+      */}
     </div>
   );
 };

@@ -35,7 +35,7 @@ const SingleLandmark = () => {
 
   return (
     <div className="">
-      <div className="lg:mx-48">
+      <div className="lg:mx-40">
         <Head>
           <title>{landmark?.title}</title>
         </Head>

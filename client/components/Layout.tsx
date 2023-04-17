@@ -19,10 +19,10 @@ const Layout = ({ children }: any) => {
       {!user && (
         <Link
           href={"/login"}
-          className="cursor-default z-50 fixed right-0 top-0 bottom-0"
+          className="cursor-default z-[140] fixed right-0 top-0 bottom-0"
         >
           <div
-            className="z-20 absolute bottom-10 right-10 rounded-full h-14 w-14 bg-white flex justify-center items-center"
+            className="z-[140] absolute bottom-10 right-10 rounded-full h-14 w-14 bg-white flex justify-center items-center"
             style={{
               boxShadow: "0 20px 25px -5px #7a7acd, 0 8px 10px -6px #7a7acd",
             }}
@@ -37,13 +37,13 @@ const Layout = ({ children }: any) => {
         </Link>
       )}
       {/* {router.pathname !== "/cart" && "/profile" && ( */}
-        <div className="flex justify-center">
-          <div className="container text-center">
-            <p className="text-muted mb-0 py-2">
-              © 2023 Breathe All rights reserved.
-            </p>
-          </div>
+      <div className="flex justify-center">
+        <div className="container text-center">
+          <p className="text-muted mb-0 py-2">
+            © 2023 Breathe All rights reserved.
+          </p>
         </div>
+      </div>
       {/* )} */}
     </div>
   );
