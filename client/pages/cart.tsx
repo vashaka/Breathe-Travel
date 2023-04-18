@@ -37,6 +37,9 @@ const Cart = () => {
 
   return (
     <div className="h-full">
+      <div className="sticky top-[50px]">
+        <h1 className="">CART</h1>
+      </div>
       {landmarksCart.length > 0 ? (
         <h1 className="text-center">Landmarks You Choose</h1>
       ) : (

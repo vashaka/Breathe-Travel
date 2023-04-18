@@ -55,14 +55,14 @@ const HomePage = () => {
           style={{
             whiteSpace: "nowrap",
           }}
-          className="flex justify-center mb-1 sticky top-[92px] z-[100] md:flex md:static h-10 md:bg-transparent w-[100%] mx-auto md:h-auto opacity-95 rounded-md md:rounded-none bg-white"
+          className="flex justify-center mb-1 sticky top-[95px] z-[100] md:flex md:static h-10 md:bg-transparent w-[100%] mx-auto md:h-auto opacity-95 rounded-md md:rounded-none bg-white"
         >
           <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm h-full">
             step 2 -
           </h1>
           <h1 className="text-transparent text-xs">h</h1>
           <h1 className="text-xl text-[#f51767] mt-1">Choose Your Landmarks</h1>
-          <p className="text-md mb-1 mt-10 text-center absolute  md:bg-transparent text-[#324d67] rounded-md md:rounded-none bg-white">
+          <p className="text-md mb-1 mt-10 text-center absolute md:bg-transparent text-[#324d67] rounded-md md:rounded-none bg-white">
             // Tap on your favourite and check it on the map
           </p>
         </div>
@@ -90,7 +90,7 @@ const HomePage = () => {
           style={{
             whiteSpace: "nowrap",
           }}
-          className="flex justify-center mb-1 sticky top-[92px] z-[100] md:flex md:static h-10 md:bg-transparent w-[100%] mx-auto md:h-auto opacity-95 rounded-md md:rounded-none bg-white"
+          className="flex justify-center mb-1 sticky top-[95px] z-[100] md:flex md:static h-10 md:bg-transparent w-[100%] mx-auto md:h-auto opacity-95 rounded-md md:rounded-none bg-white"
         >
           <h1 className="h-full text-white bg-[#f51767] px-2 py-1 rounded-sm">
             step 3 -
